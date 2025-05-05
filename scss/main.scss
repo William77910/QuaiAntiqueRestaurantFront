@@ -16,3 +16,34 @@ footer.footer{
     bottom: 0;
     width: 100%;
 }
+
+p{
+    font-family: $font-family-serif; /*--change la police en serif--*/
+    font-size: 18px; /*--sinon taille de 18px--*/
+}
+
+.hero-scene{  
+    position: relative;
+    &::before{
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/fondheroscene.jpg); /*--image de fond--*/
+        background-size: cover; /*--image de fond--*/
+        filter: brightness(0.3); /*--luminausité de l'image de fond--*/
+        }
+        *{
+            position: relative; /*Positionner tout les éléments devant le ::before*/
+        }
+        .hero-scene-content{ /*--container de la scène--*/
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    
+}
