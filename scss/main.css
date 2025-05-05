@@ -12015,4 +12015,8 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.text-justify {
+  text-align: justify; /*--justifier le texte--*/
 }/*# sourceMappingURL=main.css.map */
