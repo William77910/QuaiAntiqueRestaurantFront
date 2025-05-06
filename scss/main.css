@@ -11993,7 +11993,8 @@ p {
 }
 
 .hero-scene {
-  position: relative;
+  position: relative; /*--positionner la scène--*/
+  margin-bottom: 15px; /*--marge en bas de la scène--*/
 }
 .hero-scene::before {
   content: "";
@@ -12040,4 +12041,8 @@ p {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: all 0.3s;
+}
+
+.form-label {
+  color: #906427;
 }/*# sourceMappingURL=main.css.map */

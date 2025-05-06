@@ -23,8 +23,9 @@ p{
 }
 
 .hero-scene{  
-    position: relative;
-    &::before{
+    position: relative; /*--positionner la scène--*/
+    margin-bottom: 15px; /*--marge en bas de la scène--*/
+    &::before{ 
         content:"";
         position: absolute;
         top: 0;
@@ -75,4 +76,8 @@ p{
         opacity: 0;
         transition: all 0.3s;
     }
+}
+
+.form-label{
+    color: $primary;
 }
