@@ -12,20 +12,26 @@
     <div class="row row-cols-2 row-cols-lg-3"> <!--ajoute une rangée de 2 colonnes-->
         <div class="col p-3"> <!--ajoute une colonne et un padding de 3-->
             <div class="image-card text-white"> <!--ajoute une carte d'image avec un texte blanc-->
-            <img class="w-100 rounded" src="../images/food.jpg"> <!--ajoute une image en 100%-->
-            <p class="titre-image">Titre</p>
-            <div class="action-image-buttons">
+                <img class="w-100 rounded" src="../images/food.jpg"> <!--ajoute une image en 100%-->
+                <p class="titre-image">Titre</p>
+                <div class="action-image-buttons">
                 <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">
                     <i class="bi bi-pencil-square"></i>Modifier</button> <!--ajoute un bouton de modification-->
                 <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal">
                     <i class="bi bi-trash"></i>Supprimer</button> <!--ajoute un bouton de suppression-->
-            </div>
+                </div>
             </div>
         </div>
         <div class="col p-3"> <!--ajoute une colonne et un padding de 3-->
             <div class="image-card text-white"> <!--ajoute une carte d'image avec un texte blanc-->
-            <img class="w-100 rounded" src="../images/sushi.jpg"> <!--ajoute une image en 100%-->
-            <p class="titre-image">Titre</p>
+                <img class="w-100 rounded" src="../images/sushi.jpg"> <!--ajoute une image en 100%-->
+                <p class="titre-image">Titre</p>
+                <div class="action-image-buttons">
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">
+                        <i class="bi bi-pencil-square"></i>Modifier</button> <!--ajoute un bouton de modification-->
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal">
+                        <i class="bi bi-trash"></i>Supprimer</button> <!--ajoute un bouton de suppression-->
+                    </div>
             </div>
         </div>
         <div class="col p-3"> <!--ajoute une colonne et un padding de 3-->
@@ -54,7 +60,7 @@
         </div>
     </div>
     <div class="text-center">
-        <a href="#" class="btn btn-primary">Réserver</a>
+        <a href="/reserver" class="btn btn-primary">Réserver</a>
     </div>
 </div>
 
@@ -98,7 +104,7 @@
                 <form> <!--ajoute le formulaire de modification-->
                     <div class="mb-3"> <!--ajoute une marge en bas de 3-->
                         <p>Titre</p>
-                        <img src="../images/food.jpg" class="w-100 rounded"> <!--ajoute une image en 100%-->
+                        <img src="../images/food.jpg" class="w-100 rounded"> <!--ajoute l'image à supprimer-->
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-danger">Supprimer</button>
