@@ -20,8 +20,10 @@ function validateForm(){
     const nomOk = validateRequired(inputNom);  // Valider le champ requis
     const prenomOk = validateRequired(inputPrenom);
     const emailOk = validateEmail(inputEmail);
+    const passwordOk = validatePassword(inputPassword);  // Valider le mot de passe
+    const passwordConfirmOk = validateComfirmationPassword(inputPassword, inputValidatePassword);  // Valider la confirmation du mot de passe
 
-    if(nomOk && prenomOk && emailOk) {  // Vérifier si tous les champs requis sont valides
+    if(nomOk && prenomOk && emailOk && passwordOk && passwordConfirmOk) {  // Vérifier si tous les champs requis sont valides
         btnValidation.disabled = false;
         // Activer le bouton de validation si le formulaire est valide
     }
@@ -29,6 +31,37 @@ function validateForm(){
     else{
         btnValidation.disabled = true;  
         // Désactiver le bouton de validation si le formulaire n'est pas valide
+    }
+}
+
+function validateComfirmationPassword(inputPassword, inputvalidatePassword){
+    if(inputPassword.value == inputvalidatePassword.value) {  // Vérifier si le mot de passe et la confirmation du mot de passe correspondent
+        inputvalidatePassword.classList.add("is-valid");  // Ajouter la classe "is-valid" pour indiquer que le champ est valide
+        inputvalidatePassword.classList.remove("is-invalid");  // Supprimer la classe "is-invalid" si elle existe
+        return true;
+    }
+    else{
+        inputvalidatePassword.classList.add("is-invalid");  // Ajouter la classe "is-invalid" pour indiquer que le champ est invalide
+        inputvalidatePassword.classList.remove("is-valid");  // Supprimer la classe "is-valid" si elle existe
+        return false;
+    }
+}
+
+function validatePassword(input){
+    // Définir mon regex
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/; // Regex pour valider le mot de passe
+    const passwordlUser = input.value;  // Récupérer la valeur de l'input pawword
+    if(passwordlUser.match(passwordRegex)) {  // Vérifier si le password correspond au regex
+        // C'est ok
+        input.classList.add("is-valid");  // Ajouter la classe "is-valid" pour indiquer que le champ est valide
+        input.classList.remove("is-invalid");  // Supprimer la classe "is-invalid" si elle existe
+        return true;
+    }
+    else{
+        // Afficher un message d'erreur
+        input.classList.remove("is-valid");  // Supprimer la classe "is-valid" si elle existe
+        input.classList.add("is-invalid");  // Ajouter la classe "is-invalid" pour indiquer que le champ est invalide
+        return false;
     }
 }
 
