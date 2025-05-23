@@ -14,7 +14,7 @@
             <div class="image-card text-white"> <!--ajoute une carte d'image avec un texte blanc-->
                 <img class="w-100 rounded" src="../images/food.jpg"> <!--ajoute une image en 100%-->
                 <p class="titre-image">Titre</p>
-                <div data-show="admin" class="action-image-buttons"> <!--ajoute une div pour les boutons d'action-->
+                <div class="action-image-buttons" data-show="admin"> <!--ajoute une div pour les boutons d'action-->
                 <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">
                     <i class="bi bi-pencil-square"></i>Modifier</button> <!--ajoute un bouton de modification-->
                 <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal">
@@ -26,7 +26,7 @@
             <div class="image-card text-white"> <!--ajoute une carte d'image avec un texte blanc-->
                 <img class="w-100 rounded" src="../images/sushi.jpg"> <!--ajoute une image en 100%-->
                 <p class="titre-image">Titre</p>
-                <div class="action-image-buttons" data-show="admin" >
+                <div class="action-image-buttons" data-show="admin">
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">
                         <i class="bi bi-pencil-square"></i>Modifier</button> <!--ajoute un bouton de modification-->
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal">
@@ -69,7 +69,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="EditionPhotoModalLabel">Edition Photo</h1>
+                <h2 class="modal-title fs-5" id="EditionPhotoModalLabel">Edition Photo</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body"> <!--ajoute le corps de la modale-->
@@ -83,7 +83,7 @@
                         <input type="file" class="form-control" id="ImageInput">
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        <button type="button" class="btn btn-primary">Enregistrer</button>
                     </div>
                 </form>
             </div>
@@ -97,7 +97,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="DeletePhotoModalLabel">Êtes vous sûr de vouloir supprimer cette photo ?</h1>
+                <h2 class="modal-title fs-5" id="DeletePhotoModalLabel">Êtes vous sûr de vouloir supprimer cette photo ?</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body"> <!--ajoute le corps de la modale-->
@@ -107,8 +107,8 @@
                         <img src="../images/food.jpg" class="w-100 rounded"> <!--ajoute l'image à supprimer-->
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-danger">Supprimer</button>
-                        <button type="submit" class="btn btn-secondary" ata-bs-dismiss="modal">Annuler</button>
+                        <button type="button" class="btn btn-danger">Supprimer</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                     </div>
                 </form>
             </div>
