@@ -55,7 +55,7 @@ document.getElementById("main-page").innerHTML = html;      // Ajout du contenu 
 // Ajout du contenu JavaScript
 if (actualRoute.pathJS != "") {                             // Vérification si un fichier JavaScript est spécifié
     // Création d'une balise script
-    var scriptTag = document.createElement("script");       // Création d'une balise script
+    const scriptTag = document.createElement("script");       // Création d'une balise script
     scriptTag.setAttribute("type", "text/javascript");      // Définition du type de la balise script
     scriptTag.setAttribute("src", actualRoute.pathJS);      // Définition de la source du script
     // Ajout de la balise script au corps du document
