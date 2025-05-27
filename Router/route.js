@@ -1,4 +1,4 @@
-export default class Route {
+export default class route {
     constructor(url, title, pathHtml, authorize, pathJS = "") {
     this.url = url;
     this.title = title;
